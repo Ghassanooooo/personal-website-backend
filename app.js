@@ -23,6 +23,9 @@ app.use(core);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("OK");
+});
 app.use("/api/v1/users", usersRouter);
 app.use("/api/v1/blogs", blogsRouter);
 
